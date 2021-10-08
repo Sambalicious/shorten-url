@@ -1,8 +1,9 @@
+console.log(process.env);
 module.exports = {
   development: {
-    username: "USER",
-    password: "sambalicious",
-    database: "database_development",
+    username: process.env.DB_USERNAME,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DATABASE_URL,
     host: process.env.HOST,
     dialect: "postgres",
   },
@@ -21,3 +22,7 @@ module.exports = {
     dialect: "mysql",
   },
 };
+
+
+
+
