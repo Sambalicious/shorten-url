@@ -5,6 +5,7 @@ const app = require("express")();
 
 require('./start/db')()
 require('./start/routes')(app);
+require('./start/prod')(app);
 
 const port = process.env.PORT || 8080;
 
