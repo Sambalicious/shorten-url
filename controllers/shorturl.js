@@ -28,7 +28,7 @@ exports.shortUrl = asyncMiddleware(async (req, res) => {
 
     return res.json(url);
   } else {
-    return res.status(400).json("Invalid long url");
+    return res.status(400).json({ message: "Invalid url. Please check again" });
   }
 });
 
